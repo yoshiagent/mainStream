@@ -3,140 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>近 10 日漲停股強勢分析 — 2026/05/12（股價 ≥ 50 元）</title>
+<title>近 10 日漲停股強勢分析 — 2026-05-13（股價 ≥ 50 元）</title>
 <style>
   :root {
-    --bg: #080e18;
-    --card: #131f2e;
-    --code: #07111e;
-    --text: #e2e8f0;
-    --muted: #94a3b8;
-    --border: #2d3f55;
-    --blue: #3b82f6;
-    --blue-soft: #93c5fd;
-    --orange: #fb923c;
-    --green: #4ade80;
-    --red: #f87171;
-    --callout-bg: #0f2040;
-    --callout-border: rgba(59,130,246,0.3);
-    --gAplus: #10b981;
-    --gA: #22c55e;
-    --gB: #facc15;
-    --gC: #f97316;
-    --gD: #64748b;
+    --bg: #080e18; --card: #131f2e; --code: #07111e;
+    --text: #e2e8f0; --muted: #94a3b8; --border: #2d3f55;
+    --blue: #3b82f6; --blue-soft: #93c5fd; --orange: #fb923c;
+    --green: #4ade80; --red: #f87171;
+    --callout-bg: #0f2040; --callout-border: rgba(59,130,246,0.3);
+    --gAplus: #10b981; --gA: #22c55e; --gB: #facc15;
+    --gC: #f97316; --gD: #64748b;
   }
   * { box-sizing: border-box; }
-  body {
-    margin: 0; padding: 24px;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "PingFang TC", sans-serif;
-    line-height: 1.7;
-    font-size: 15px;
-  }
-  .wrap { max-width: 1080px; margin: 0 auto; }
-  h1 { font-size: 26px; margin: 0 0 6px; color: var(--text); }
-  h2 {
-    font-size: 20px; margin: 36px 0 14px;
-    padding-bottom: 8px; border-bottom: 1px solid var(--border);
-    color: var(--blue-soft);
-  }
-  h3 { font-size: 16px; margin: 22px 0 10px; color: var(--orange); }
-  p { margin: 8px 0; }
-  ul, ol { padding-left: 22px; margin: 8px 0; }
-  li { margin: 4px 0; }
-  strong { color: var(--orange); font-weight: 600; }
-  .muted { color: var(--muted); font-size: 13px; }
-  .meta { color: var(--muted); font-size: 14px; margin: 0 0 18px; }
-  .pill {
-    display: inline-block;
-    padding: 1px 9px;
-    border-radius: 999px;
-    font-size: 12px;
-    background: rgba(59,130,246,0.18);
-    color: var(--blue-soft);
-    border: 1px solid var(--callout-border);
-    margin-left: 6px;
-    vertical-align: 1px;
-  }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 16px 20px;
-    margin: 14px 0;
-  }
-  .callout {
-    background: var(--callout-bg);
-    border: 1px solid var(--callout-border);
-    border-radius: 6px;
-    padding: 12px 16px;
-    margin: 12px 0;
-    color: var(--blue-soft);
-  }
-  .callout strong { color: #bfdbfe; }
-  .grid2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-  @media (max-width: 720px) {
-    .grid2 { grid-template-columns: 1fr; }
-  }
-  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13.5px;
-    margin: 4px 0 8px;
-    min-width: 560px;
-  }
-  th, td {
-    padding: 7px 9px;
-    border-bottom: 1px solid var(--border);
-    text-align: center;
-    white-space: nowrap;
-  }
-  th {
-    background: #0d1828;
-    color: var(--blue-soft);
-    font-weight: 600;
-    border-bottom: 2px solid var(--border);
-  }
-  tr:hover td { background: rgba(59,130,246,0.06); }
-  td.left, th.left { text-align: left; }
-  .g {
-    display: inline-block;
-    min-width: 28px;
-    padding: 1px 8px;
-    border-radius: 4px;
-    font-weight: 700;
-    color: #0a0a0a;
-    font-size: 12.5px;
-  }
-  .g.Aplus { background: var(--gAplus); color: #052e1d; }
-  .g.A     { background: var(--gA); color: #052e1d; }
-  .g.B     { background: var(--gB); color: #3f2c00; }
-  .g.C     { background: var(--gC); color: #3f1d00; }
-  .g.D     { background: var(--gD); color: #fff; }
-  .warn { color: var(--red); font-weight: 700; }
-  .hot  { color: var(--orange); font-weight: 700; }
-  .ok   { color: var(--green); font-weight: 700; }
-  code {
-    background: var(--code);
-    color: #7dd3fc;
-    padding: 1px 6px;
-    border-radius: 3px;
-    font-size: 13px;
-    font-family: "Consolas", "Monaco", monospace;
-  }
-  footer {
-    margin-top: 48px;
-    padding: 18px 0 8px;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 13px;
-  }
+  body { margin:0; padding:24px; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft JhengHei","PingFang TC",sans-serif;
+    line-height:1.7; font-size:15px; }
+  .wrap { max-width:1080px; margin:0 auto; }
+  h1 { font-size:26px; margin:0 0 6px; color:var(--text); }
+  h2 { font-size:20px; margin:36px 0 14px; padding-bottom:8px;
+    border-bottom:1px solid var(--border); color:var(--blue-soft); }
+  h3 { font-size:16px; margin:22px 0 10px; color:var(--orange); }
+  p { margin:8px 0; } ul, ol { padding-left:22px; margin:8px 0; }
+  li { margin:4px 0; } strong { color:var(--orange); font-weight:600; }
+  .muted { color:var(--muted); font-size:13px; }
+  .meta { color:var(--muted); font-size:14px; margin:0 0 18px; }
+  .pill { display:inline-block; padding:1px 9px; border-radius:999px;
+    font-size:12px; background:rgba(59,130,246,0.18); color:var(--blue-soft);
+    border:1px solid var(--callout-border); margin-left:6px; vertical-align:1px; }
+  .card { background:var(--card); border:1px solid var(--border);
+    border-radius:8px; padding:16px 20px; margin:14px 0; }
+  .callout { background:var(--callout-bg); border:1px solid var(--callout-border);
+    border-radius:6px; padding:12px 16px; margin:12px 0; color:var(--blue-soft); }
+  .callout strong { color:#bfdbfe; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:720px) { .grid2 { grid-template-columns:1fr; } }
+  .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px;
+    margin:4px 0 8px; min-width:560px; }
+  th, td { padding:7px 9px; border-bottom:1px solid var(--border);
+    text-align:center; white-space:nowrap; }
+  th { background:#0d1828; color:var(--blue-soft); font-weight:600;
+    border-bottom:2px solid var(--border); }
+  tr:hover td { background:rgba(59,130,246,0.06); }
+  td.left, th.left { text-align:left; }
+  .g { display:inline-block; min-width:28px; padding:1px 8px;
+    border-radius:4px; font-weight:700; color:#0a0a0a; font-size:12.5px; }
+  .g.Aplus { background:var(--gAplus); color:#052e1d; }
+  .g.A { background:var(--gA); color:#052e1d; }
+  .g.B { background:var(--gB); color:#3f2c00; }
+  .g.C { background:var(--gC); color:#3f1d00; }
+  .g.D { background:var(--gD); color:#fff; }
+  .warn { color:var(--red); font-weight:700; }
+  .hot { color:var(--orange); font-weight:700; }
+  .ok { color:var(--green); font-weight:700; }
+  code { background:var(--code); color:#7dd3fc; padding:1px 6px;
+    border-radius:3px; font-size:13px; font-family:"Consolas","Monaco",monospace; }
+  footer { margin-top:48px; padding:18px 0 8px; border-top:1px solid var(--border);
+    color:var(--muted); font-size:13px; }
 
   a.tv-link {
     color: inherit;
@@ -157,35 +80,31 @@
 
   <header>
     <h1>近 10 日漲停股強勢分析<span class="pill">股價 ≥ 50 元</span></h1>
-    <p class="meta">資料區間：<strong>2026-04-28 ~ 2026-05-12</strong>（10 個交易日）　·　濾後資料筆數：<strong>321 檔</strong>（已剔除股價 &lt; 50 元的 181 檔低價股）　·　產生日期：2026-05-12</p>
+    <p class="meta">資料區間：<strong>2026-04-28 ~ 2026-05-12</strong>（10 個交易日）　·　濾後資料筆數：<strong>326 檔</strong>（已剔除股價 &lt; 50 元的 195 檔低價股）　·　產生日期：2026-05-13</p>
   </header>
 
-  <!-- 過濾說明 -->
   <section>
     <h2>本次過濾條件</h2>
     <div class="callout">
-      <strong>已剔除股價 &lt; 50 元 的低價股共 181 檔</strong>。原因：低價股在歷史數據中質地最差（A+/A 級佔比為 <strong>0%</strong>，僅 3.3% 進入 B 級以上），且法人關注度最低（平均買超 4.3 天，全市場墊底）。過濾後焦點集中在「法人會看的中價以上品種」，訊號雜訊比顯著改善。
+      <strong>已剔除股價 &lt; 50 元 的低價股共 195 檔</strong>。原因：低價股質地最差（&lt; 20 元組 B 級以上佔比僅 0.0%），且法人關注度最低（平均買超 0.0 天）。過濾後焦點集中在「法人會看的中價以上品種」，訊號雜訊比顯著改善。
     </div>
   </section>
 
-  <!-- 摘要 -->
   <section>
     <h2>結論摘要</h2>
     <div class="card">
       <ul>
-        <li>濾後 321 檔，<strong>A+ 級 2 檔</strong>、<strong>A 級 8 檔</strong>，主流中的主流共 10 檔。</li>
-        <li>A+：<strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3016&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">3016 嘉晶</a></strong>（半導體 / 磊晶，法人 8 天）與 <strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A1597&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">1597 直得</a></strong>（電機機械 / 滑軌，法人 8 天）—— 兩檔都具備「連續漲停 + 法人持續買超 + 漲幅合理」的完整型態。</li>
-        <li>細分族群龍頭：<strong>PCB 相關設備 12 檔</strong>、<strong>IC 封裝 10 檔</strong>、<strong>半導體製程設備 10 檔</strong>、<strong>印刷電路板 9 檔</strong>。</li>
-        <li>跨主題彙整：<strong>IC 設計 38 檔漲停</strong>（合計躍升至全市場第 2 大主題），多數為法人佈局型而非連續飆漲。</li>
+        <li>濾後 326 檔，<strong>A+ 級 3 檔</strong>、<strong>A 級 9 檔</strong>，主流中的主流共 12 檔。</li>
+        <li>A+：<strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A5464&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">5464 霖宏</a></strong>（印刷電路板，法人 7 天） 與 <strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3016&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">3016 嘉晶</a></strong>（磊晶，法人 8 天） 與 <strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A1597&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">1597 直得</a></strong>（滑軌，法人 8 天） —— 「連續漲停 + 法人持續買超 + 漲幅合理」的完整型態。</li>
+        <li>細分族群龍頭：<strong>PCB相關設備 12 檔</strong>、<strong>半導體製程設備 11 檔</strong>、<strong>IC封裝 10 檔</strong>、<strong>印刷電路板 9 檔</strong>。</li>
+        <li>跨主題彙整：<strong>IC 設計 39 檔漲停</strong>（被細分類拆散後反而看不出，需用多 tag 觀察）。</li>
         <li>新發動的 A 級強股（首次漲停距今 ≤ 3 日）：<strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A6206&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">6206 飛捷</a></strong>（距今 1 日）、<strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3055&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">3055 蔚華科</a></strong>（距今 3 日）。</li>
-        <li>低價妖股「<strong>8291 尚茂</strong>」（10 連板）已隨低價股一併剔除——這正是過濾的價值。</li>
       </ul>
     </div>
   </section>
 
-  <!-- A+ / A 級強股 -->
   <section>
-    <h2>強勢評分 A+ / A 級 — 主流中的主流（10 檔）</h2>
+    <h2>強勢評分 A+ / A 級 — 主流中的主流（12 檔）</h2>
     <p class="muted">排序：強勢評分 ↓ → 漲停天數 ↓ → 連續漲停 ↓</p>
     <div class="card table-wrap">
       <table>
@@ -197,73 +116,37 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>61.6</strong></td><td><span class="g Aplus">A+</span></td><td>3016</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3016&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">嘉晶</a></td><td>6</td><td>9</td><td>+80.0</td><td>2.06</td><td class="ok">8</td><td class="left">磊晶</td><td>半導體鏈龍頭</td></tr>
-          <tr><td><strong>61.1</strong></td><td><span class="g Aplus">A+</span></td><td>1597</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A1597&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">直得</a></td><td>6</td><td>9</td><td>+69.2</td><td>2.11</td><td class="ok">8</td><td class="left">滑軌</td><td>電機機械</td></tr>
-          <tr><td>57.2</td><td><span class="g A">A</span></td><td>3026</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3026&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">禾伸堂</a></td><td>5</td><td>6</td><td>+51.4</td><td>3.19</td><td>7</td><td class="left">電子元件代理商</td><td></td></tr>
-          <tr><td>54.1</td><td><span class="g A">A</span></td><td>2417</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A2417&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">圓剛</a></td><td>4</td><td>8</td><td>+30.4</td><td>5.95</td><td>6</td><td class="left">視訊會議產品</td><td></td></tr>
-          <tr><td>53.4</td><td><span class="g A">A</span></td><td>5464</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A5464&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">霖宏</a></td><td>3</td><td>6</td><td>+104.2</td><td>8.25</td><td>7</td><td class="left">印刷電路板</td><td>已過熱</td></tr>
-          <tr><td>52.6</td><td><span class="g A">A</span></td><td>4951</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A4951&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">精拓科</a></td><td>5</td><td>9</td><td>+46.7</td><td>2.87</td><td>6</td><td class="left">PC週邊IC</td><td>IC設計</td></tr>
-          <tr><td>52.1</td><td><span class="g A">A</span></td><td>6206</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A6206&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">飛捷</a></td><td>1</td><td class="hot">1</td><td>+32.1</td><td>5.53</td><td class="ok">9</td><td class="left">POS機系統</td><td>🔥 最新發動</td></tr>
-          <tr><td>51.3</td><td><span class="g A">A</span></td><td>3055</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3055&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">蔚華科</a></td><td>4</td><td class="hot">3</td><td>+44.0</td><td>6.34</td><td>5</td><td class="left">封測用設備</td><td>🔥 新發動</td></tr>
-          <tr><td>50.5</td><td><span class="g A">A</span></td><td>6182</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A6182&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">合晶</a></td><td>2</td><td>6</td><td>+39.7</td><td>5.57</td><td>7</td><td class="left">矽晶圓</td><td></td></tr>
-          <tr><td>50.1</td><td><span class="g A">A</span></td><td>8042</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A8042&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">金山電</a></td><td>3</td><td>6</td><td>+73.5</td><td>5.89</td><td>5</td><td class="left">鋁質電解電容</td><td></td></tr>
+          <tr><td><strong>69.4</strong></td><td><span class="g Aplus">A+</span></td><td>5464</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A5464&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">霖宏</a></td><td>7</td><td class="">6</td><td>+104.2</td><td>8.25</td><td class="ok">7</td><td class="left">印刷電路板</td><td>⚠️ 過熱</td></tr><tr><td><strong>61.6</strong></td><td><span class="g Aplus">A+</span></td><td>3016</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3016&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">嘉晶</a></td><td>6</td><td class="">9</td><td>+80.0</td><td>2.06</td><td class="ok">8</td><td class="left">磊晶</td><td>法人高</td></tr><tr><td><strong>61.1</strong></td><td><span class="g Aplus">A+</span></td><td>1597</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A1597&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">直得</a></td><td>6</td><td class="">9</td><td>+69.2</td><td>2.11</td><td class="ok">8</td><td class="left">滑軌</td><td>法人高</td></tr><tr><td>58.1</td><td><span class="g A">A</span></td><td>8042</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A8042&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">金山電</a></td><td>5</td><td class="">6</td><td>+73.5</td><td>5.89</td><td class="">5</td><td class="left">鋁質電解電容</td><td></td></tr><tr><td>57.2</td><td><span class="g A">A</span></td><td>3026</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3026&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">禾伸堂</a></td><td>5</td><td class="">6</td><td>+51.4</td><td>3.19</td><td class="ok">7</td><td class="left">電子元件代理商</td><td></td></tr><tr><td>54.1</td><td><span class="g A">A</span></td><td>2417</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A2417&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">圓剛</a></td><td>4</td><td class="">8</td><td>+30.4</td><td>5.95</td><td class="">6</td><td class="left">視訊會議產品</td><td></td></tr><tr><td>53.8</td><td><span class="g A">A</span></td><td>6173</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A6173&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">信昌電</a></td><td>5</td><td class="">4</td><td>+89.9</td><td>3.19</td><td class="">5</td><td class="left">MLCC</td><td></td></tr><tr><td>52.6</td><td><span class="g A">A</span></td><td>4951</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A4951&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">精拓科</a></td><td>5</td><td class="">9</td><td>+46.7</td><td>2.87</td><td class="">6</td><td class="left">PC週邊IC</td><td></td></tr><tr><td>52.1</td><td><span class="g A">A</span></td><td>6206</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A6206&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">飛捷</a></td><td>1</td><td class="hot">1</td><td>+32.1</td><td>5.53</td><td class="ok">9</td><td class="left">POS機系統</td><td>🔥 新發動、法人高</td></tr><tr><td>51.4</td><td><span class="g A">A</span></td><td>8227</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A8227&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">巨有科技</a></td><td>4</td><td class="">5</td><td>+30.0</td><td>5.79</td><td class="">5</td><td class="left">ASIC</td><td></td></tr><tr><td>51.3</td><td><span class="g A">A</span></td><td>3055</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3055&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">蔚華科</a></td><td>4</td><td class="hot">3</td><td>+44.0</td><td>6.34</td><td class="">5</td><td class="left">封測用設備</td><td>🔥 新發動</td></tr><tr><td>50.5</td><td><span class="g A">A</span></td><td>6182</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A6182&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">合晶</a></td><td>2</td><td class="">6</td><td>+39.7</td><td>5.57</td><td class="ok">7</td><td class="left">矽晶圓</td><td></td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- 主流族群兩種視角 -->
   <section>
     <h2>主流族群 — 兩種觀點互補</h2>
-
     <div class="grid2">
       <div class="card">
         <h3>視角一：族群統計（細分類）</h3>
         <p class="muted">看「細分類集中爆發」的龍頭族群</p>
         <table>
           <thead><tr><th>排名</th><th class="left">細產業</th><th>漲停檔數</th></tr></thead>
-          <tbody>
-            <tr><td>1</td><td class="left">PCB相關設備</td><td><strong>12</strong></td></tr>
-            <tr><td>2</td><td class="left">IC封裝</td><td><strong>10</strong></td></tr>
-            <tr><td>3</td><td class="left">半導體製程設備</td><td><strong>10</strong></td></tr>
-            <tr><td>4</td><td class="left">印刷電路板</td><td>9</td></tr>
-            <tr><td>5</td><td class="left">設備儀器商</td><td>8</td></tr>
-            <tr><td>6</td><td class="left">封測用設備</td><td>7</td></tr>
-            <tr><td>7</td><td class="left">連接器</td><td>7</td></tr>
-            <tr><td>8</td><td class="left">IC零組件通路商</td><td>5</td></tr>
-            <tr><td>9</td><td class="left">MCU</td><td>5</td></tr>
-            <tr><td>10</td><td class="left">光纖主動元件</td><td>5</td></tr>
-          </tbody>
+          <tbody><tr><td>1</td><td class="left">PCB相關設備</td><td><strong>12</strong></td></tr><tr><td>2</td><td class="left">半導體製程設備</td><td><strong>11</strong></td></tr><tr><td>3</td><td class="left">IC封裝</td><td><strong>10</strong></td></tr><tr><td>4</td><td class="left">印刷電路板</td><td>9</td></tr><tr><td>5</td><td class="left">設備儀器商</td><td>8</td></tr><tr><td>6</td><td class="left">封測用設備</td><td>7</td></tr><tr><td>7</td><td class="left">連接器</td><td>7</td></tr><tr><td>8</td><td class="left">IC零組件通路商</td><td>5</td></tr><tr><td>9</td><td class="left">MCU</td><td>5</td></tr><tr><td>10</td><td class="left">光纖主動元件</td><td>5</td></tr></tbody>
         </table>
       </div>
-
       <div class="card">
-        <h3>視角二:主題族群（多 tag 跨類）</h3>
+        <h3>視角二：主題族群（多 tag 跨類）</h3>
         <p class="muted">看「橫向題材」散佈式發酵</p>
         <table>
           <thead><tr><th>排名</th><th class="left">主題標籤</th><th>漲停檔數</th></tr></thead>
-          <tbody>
-            <tr><td>1</td><td class="left">設備儀器商</td><td><strong>55</strong></td></tr>
-            <tr><td>2</td><td class="left" style="color:var(--orange)">IC設計</td><td><strong>38</strong></td></tr>
-            <tr><td>3</td><td class="left">電子零件元件</td><td><strong>35</strong></td></tr>
-            <tr><td>4</td><td class="left">IC製造</td><td>28</td></tr>
-            <tr><td>5</td><td class="left">半導體製程設備</td><td>27</td></tr>
-            <tr><td>6</td><td class="left">印刷電路板相關</td><td>19</td></tr>
-            <tr><td>7</td><td class="left">被動元件</td><td>19</td></tr>
-            <tr><td>8</td><td class="left">IC封裝測試</td><td>17</td></tr>
-            <tr><td>9</td><td class="left">IC測試</td><td>16</td></tr>
-            <tr><td>10</td><td class="left">封測服務與材料</td><td>16</td></tr>
-          </tbody>
+          <tbody><tr><td>1</td><td class="left">設備儀器商</td><td><strong>56</strong></td></tr><tr><td>2</td><td class="left" style="color:var(--orange)">IC設計</td><td><strong>39</strong></td></tr><tr><td>3</td><td class="left">電子零件元件</td><td><strong>36</strong></td></tr><tr><td>4</td><td class="left">IC製造</td><td>28</td></tr><tr><td>5</td><td class="left">半導體製程設備</td><td>28</td></tr><tr><td>6</td><td class="left">被動元件</td><td>20</td></tr><tr><td>7</td><td class="left">印刷電路板相關</td><td>19</td></tr><tr><td>8</td><td class="left">IC封裝測試</td><td>17</td></tr><tr><td>9</td><td class="left">IC測試</td><td>16</td></tr><tr><td>10</td><td class="left">封測服務與材料</td><td>16</td></tr></tbody>
         </table>
       </div>
     </div>
-
     <div class="callout">
-      <strong>關鍵洞察：</strong>過濾低價股後，IC 設計在跨主題排名仍維持第 2 名（38 檔），表現相當穩定——這代表 IC 設計族群的強勢是「中價以上、有法人認可」的真實力道，不是低價投機股拉抬出來的假象。
+      <strong>關鍵洞察：</strong>細產業 (族群統計) 把 IC 設計拆成 20+ 個子類（LCD驅動IC / ASIC / 設計IP / MCU 等），個別只有少數檔看似不熱。用主題族群的多 tag 視角彙整，<strong>IC 設計概念股累計 39 檔漲停</strong>，才是真實的橫向題材熱度。
     </div>
   </section>
 
-  <!-- IC 設計專題 -->
   <section>
     <h2>IC 設計概念股 — Top 15（依強勢評分）</h2>
     <p class="muted">特徵：多數僅 1~2 連板，但<strong>外資投信買超天數普遍 5~9 天</strong>，是「法人正在悄悄佈局」的型態，與 PCB 設備鏈的「連續飆漲已成型」不同。</p>
@@ -273,60 +156,33 @@
           <tr><th>評分</th><th>等</th><th>代號</th><th class="left">股名</th><th>連續</th><th>法人天</th><th class="left">細子分類</th></tr>
         </thead>
         <tbody>
-          <tr><td>52.6</td><td><span class="g A">A</span></td><td>4951</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A4951&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">精拓科</a></td><td>5</td><td>6</td><td class="left">PC週邊IC</td></tr>
-          <tr><td>49.1</td><td><span class="g B">B</span></td><td>6526</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A6526&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">達發</a></td><td>2</td><td>7</td><td class="left">無線網路IC</td></tr>
-          <tr><td>46.9</td><td><span class="g B">B</span></td><td>3141</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A3141&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">晶宏</a></td><td>1</td><td>7</td><td class="left">LCD驅動IC</td></tr>
-          <tr><td>43.7</td><td><span class="g B">B</span></td><td>8016</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A8016&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">矽創</a></td><td>1</td><td>7</td><td class="left">LCD驅動IC</td></tr>
-          <tr><td>43.4</td><td><span class="g B">B</span></td><td>8227</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A8227&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">巨有科技</a></td><td>2</td><td>5</td><td class="left">ASIC</td></tr>
-          <tr><td>42.8</td><td><span class="g B">B</span></td><td>6695</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A6695&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">芯鼎</a></td><td>1</td><td>6</td><td class="left">影音IC</td></tr>
-          <tr><td>41.9</td><td><span class="g B">B</span></td><td>5471</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A5471&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">松翰</a></td><td>1</td><td class="ok">8</td><td class="left">MCU</td></tr>
-          <tr><td>40.4</td><td><span class="g B">B</span></td><td>6679</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A6679&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">鈺太</a></td><td>1</td><td class="ok">9</td><td class="left">MEMS</td></tr>
-          <tr><td>39.1</td><td><span class="g C">C</span></td><td>8040</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A8040&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">九暘</a></td><td>3</td><td>3</td><td class="left">網路通訊IC</td></tr>
-          <tr><td>37.7</td><td><span class="g C">C</span></td><td>4966</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A4966&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">譜瑞-KY</a></td><td>2</td><td>3</td><td class="left">高速傳輸介面IC</td></tr>
-          <tr><td>37.5</td><td><span class="g C">C</span></td><td>3034</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3034&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">聯詠</a></td><td>1</td><td>7</td><td class="left">LCD驅動IC</td></tr>
-          <tr><td>37.5</td><td><span class="g C">C</span></td><td>3438</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A3438&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">類比科</a></td><td>1</td><td>5</td><td class="left">電源管理IC</td></tr>
-          <tr><td>37.0</td><td><span class="g C">C</span></td><td>6716</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A6716&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">應廣</a></td><td>2</td><td>7</td><td class="left">MCU</td></tr>
-          <tr><td>36.7</td><td><span class="g C">C</span></td><td>3006</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3006&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">晶豪科</a></td><td>1</td><td class="ok">8</td><td class="left">DRAM記憶體IC</td></tr>
-          <tr><td>36.7</td><td><span class="g C">C</span></td><td>3209</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3209&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">全科</a></td><td>2</td><td>7</td><td class="left">IC零組件通路商</td></tr>
+          <tr><td>52.6</td><td><span class="g A">A</span></td><td>4951</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A4951&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">精拓科</a></td><td>5</td><td class="">6</td><td class="left">PC週邊IC</td></tr><tr><td>51.4</td><td><span class="g A">A</span></td><td>8227</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A8227&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">巨有科技</a></td><td>4</td><td class="">5</td><td class="left">ASIC</td></tr><tr><td>49.1</td><td><span class="g B">B</span></td><td>6526</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A6526&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">達發</a></td><td>2</td><td class="ok">7</td><td class="left">無線網路IC</td></tr><tr><td>46.9</td><td><span class="g B">B</span></td><td>3141</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A3141&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">晶宏</a></td><td>1</td><td class="ok">7</td><td class="left">LCD驅動IC</td></tr><tr><td>43.7</td><td><span class="g B">B</span></td><td>8016</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A8016&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">矽創</a></td><td>1</td><td class="ok">7</td><td class="left">LCD驅動IC</td></tr><tr><td>42.8</td><td><span class="g B">B</span></td><td>6695</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A6695&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">芯鼎</a></td><td>1</td><td class="">6</td><td class="left">影音IC</td></tr><tr><td>41.9</td><td><span class="g B">B</span></td><td>5471</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A5471&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">松翰</a></td><td>1</td><td class="ok">8</td><td class="left">MCU</td></tr><tr><td>40.4</td><td><span class="g B">B</span></td><td>6679</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A6679&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">鈺太</a></td><td>1</td><td class="ok">9</td><td class="left">MEMS</td></tr><tr><td>39.1</td><td><span class="g C">C</span></td><td>8040</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A8040&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">九暘</a></td><td>3</td><td class="">3</td><td class="left">網路通訊IC</td></tr><tr><td>37.7</td><td><span class="g C">C</span></td><td>4966</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A4966&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">譜瑞-KY</a></td><td>2</td><td class="">3</td><td class="left">高速傳輸介面IC</td></tr><tr><td>37.5</td><td><span class="g C">C</span></td><td>3034</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3034&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">聯詠</a></td><td>1</td><td class="ok">7</td><td class="left">LCD驅動IC</td></tr><tr><td>37.5</td><td><span class="g C">C</span></td><td>3438</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A3438&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">類比科</a></td><td>1</td><td class="">5</td><td class="left">電源管理IC</td></tr><tr><td>37.0</td><td><span class="g C">C</span></td><td>6716</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A6716&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">應廣</a></td><td>2</td><td class="ok">7</td><td class="left">MCU</td></tr><tr><td>36.7</td><td><span class="g C">C</span></td><td>3006</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3006&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">晶豪科</a></td><td>1</td><td class="ok">8</td><td class="left">DRAM記憶體IC</td></tr><tr><td>36.7</td><td><span class="g C">C</span></td><td>3209</td><td class="left"><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3209&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">全科</a></td><td>2</td><td class="ok">7</td><td class="left">IC零組件通路商</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- 篩選器 -->
   <section>
     <h2>三種實戰篩選器</h2>
-
     <div class="card">
       <h3>① 新發動主力倉</h3>
       <p class="muted">條件：<code>評等 ≥ A</code> 且 <code>首次漲停距今 ≤ 3</code> — 趨勢剛啟動、後續潛力大</p>
-      <ul>
-        <li><strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A6206&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">6206 飛捷</a></strong>（距今 1，法人 9 天）／ <strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3055&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">3055 蔚華科</a></strong>（距今 3，封測用設備）</li>
-      </ul>
+      <ul><li><strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A6206&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">6206 飛捷</a></strong>（距今 1，法人 9 天）、<strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3055&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">3055 蔚華科</a></strong>（距今 3，法人 5 天）</li></ul>
     </div>
-
     <div class="card">
       <h3>② 法人加持的強股</h3>
       <p class="muted">條件：<code>評等 ≥ A</code> 且 <code>外資投信買超天數 ≥ 7</code> — 法人錢真金白銀進場、質地優</p>
-      <ul>
-        <li><strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3016&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">3016 嘉晶</a></strong>（法人 8 天，A+）／ <strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A1597&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">1597 直得</a></strong>（法人 8 天，A+）／ <strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3026&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">3026 禾伸堂</a></strong>（7 天）／ <strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A5464&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">5464 霖宏</a></strong>（7 天）／ <strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A6182&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">6182 合晶</a></strong>（7 天）／ <strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A6206&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">6206 飛捷</a></strong>（9 天）</li>
-      </ul>
+      <ul><li><strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A5464&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">5464 霖宏</a></strong>（法人 7 天，A+）、<strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3016&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">3016 嘉晶</a></strong>（法人 8 天，A+）、<strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A1597&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">1597 直得</a></strong>（法人 8 天，A+）、<strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A3026&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">3026 禾伸堂</a></strong>（法人 7 天，A）、<strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TWSE%3A6206&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">6206 飛捷</a></strong>（法人 9 天，A）、<strong><a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A6182&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">6182 合晶</a></strong>（法人 7 天，A）</li></ul>
     </div>
-
     <div class="card">
       <h3>③ 過熱警示</h3>
       <p class="muted">條件：<code>連續 ≥ 5</code> 且 <code>爆量 ≥ 8</code> — 漲幅與爆量已偏高，注意波段風險</p>
-      <ul>
-        <li><span class="warn">⚠️ <a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A5464&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">5464 霖宏</a></span>：累積 +104%、量倍 8.25、續攻中，法人雖然續抱（7 天），但短線過熱風險升高，需嚴設停損。</li>
-        <li>說明：濾除低價股後，純散戶炒作型（如原本的 8291 尚茂）已消失，整體警示風險明顯下降。</li>
-      </ul>
+      <ul><li><span class="warn">⚠️ <a class="tv-link" href="https://www.tradingview.com/chart/?symbol=TPEX%3A5464&interval=W&studies=%5B%22MASimple%40tv-basicstudies%22%5D&studies_overrides=%7B%22Moving%20Average.length%22%3A20%7D" target="_blank" rel="noopener">5464 霖宏</a></span>：累積 +104.2%、量倍 8.25、連 7 板，法人 7 天 — 短線過熱風險升高，需嚴設停損。</li></ul>
     </div>
   </section>
 
-  <!-- 評分方法 -->
   <section>
     <h2>強勢評分計算方法（總分 100）</h2>
-
     <div class="grid2">
       <div class="card">
         <h3>四個分項</h3>
@@ -337,55 +193,46 @@
           <li><strong>漲幅分（10）</strong>：累積漲幅 / 15（150% 封頂）</li>
         </ul>
       </div>
-
       <div class="card">
-        <h3>評等分布（過濾後 321 檔）</h3>
+        <h3>評等分布（過濾後 326 檔）</h3>
         <table>
           <thead><tr><th>等</th><th>分數</th><th>檔數</th></tr></thead>
           <tbody>
-            <tr><td><span class="g Aplus">A+</span></td><td>≥ 60</td><td>2</td></tr>
-            <tr><td><span class="g A">A</span></td><td>50 ~ 59</td><td>8</td></tr>
-            <tr><td><span class="g B">B</span></td><td>40 ~ 49</td><td>34</td></tr>
-            <tr><td><span class="g C">C</span></td><td>25 ~ 39</td><td>177</td></tr>
-            <tr><td><span class="g D">D</span></td><td>&lt; 25</td><td>100</td></tr>
+            <tr><td><span class="g Aplus">A+</span></td><td>≥ 60</td><td>3</td></tr>
+            <tr><td><span class="g A">A</span></td><td>50 ~ 59</td><td>9</td></tr>
+            <tr><td><span class="g B">B</span></td><td>40 ~ 49</td><td>38</td></tr>
+            <tr><td><span class="g C">C</span></td><td>25 ~ 39</td><td>174</td></tr>
+            <tr><td><span class="g D">D</span></td><td>&lt; 25</td><td>102</td></tr>
           </tbody>
         </table>
       </div>
     </div>
-
     <div class="callout">
       <strong>判讀邏輯：</strong>動能（連續漲停）與法人（資金面）兩個維度權重最高，量價過熱會被扣分，避免單純追逐「飆股噴出後接刀」。<br>
       新發動指標 <code>首次漲停距今</code> 不計入評分，但獨立顯示供 timing 判斷。
     </div>
   </section>
 
-  <!-- 為何要過濾低價股 -->
   <section>
     <h2>為什麼過濾掉股價 &lt; 50 元的低價股</h2>
     <div class="card table-wrap">
-      <p class="muted">原始 502 檔漲停股，依股價分組統計：</p>
+      <p class="muted">本次 521 檔漲停股，依股價分組統計：</p>
       <table>
         <thead><tr><th>價格區間</th><th>檔數</th><th>A+</th><th>A</th><th>B</th><th>C</th><th>D</th><th>法人天均</th><th>B 以上佔比</th></tr></thead>
         <tbody>
-          <tr><td>&lt; 20 元</td><td>60</td><td class="warn">0</td><td class="warn">0</td><td>2</td><td>29</td><td>29</td><td>4.3</td><td class="warn"><strong>3.3%</strong></td></tr>
-          <tr><td>20 ~ 50 元</td><td>135</td><td>2</td><td>1</td><td>22</td><td>68</td><td>42</td><td>4.9</td><td>18.5%</td></tr>
-          <tr><td><strong>50 ~ 100 元</strong></td><td>106</td><td>1</td><td>3</td><td>16</td><td>57</td><td>29</td><td>4.8</td><td><strong>18.9%</strong></td></tr>
-          <tr><td><strong>100 ~ 300 元</strong></td><td>120</td><td>2</td><td>5</td><td>15</td><td>62</td><td>36</td><td>4.9</td><td><strong>18.3%</strong></td></tr>
-          <tr><td>≥ 300 元</td><td>100</td><td>0</td><td>1</td><td>7</td><td>55</td><td>37</td><td>5.1</td><td>8.0%</td></tr>
+          <tr><td>< 20 元</td><td>60</td><td class="">0</td><td class="">0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td class="warn"><strong>0.0%</strong></td></tr><tr><td>20 ~ 50 元</td><td>135</td><td class="">0</td><td class="">0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td class="warn"><strong>0.0%</strong></td></tr><tr><td><strong>50 ~ 100 元</strong></td><td>106</td><td class="">1</td><td class="">3</td><td>16</td><td>57</td><td>29</td><td>4.8</td><td class=""><strong>18.9%</strong></td></tr><tr><td>100 ~ 300 元</td><td>120</td><td class="">2</td><td class="">5</td><td>15</td><td>62</td><td>36</td><td>4.9</td><td class=""><strong>18.3%</strong></td></tr><tr><td>≥ 300 元</td><td>100</td><td class="">0</td><td class="">1</td><td>7</td><td>55</td><td>37</td><td>5.1</td><td class=""><strong>8.0%</strong></td></tr>
         </tbody>
       </table>
     </div>
-
     <ul>
-      <li><strong>&lt; 20 元</strong>：60 檔漲停中 A+/A 為 0，B 以上僅 3.3%，法人關注度全市場最低，「漲停 = 純炒作」比例最高。</li>
-      <li><strong>20 ~ 50 元</strong>：質地中等（18.5% 進 B 級），但夾雜大量警示股、全額交割股，雜訊偏高。</li>
+      <li><strong>&lt; 20 元</strong>：質地最差，法人關注度全市場最低，「漲停 = 純炒作」比例最高。</li>
+      <li><strong>20 ~ 50 元</strong>：質地中等，但夾雜大量警示股、全額交割股，雜訊偏高。</li>
       <li><strong>50 ~ 300 元</strong>：「主流中的主流」棲息區，A+/A 集中、法人關注度穩定、技術訊號雜訊比最佳。</li>
       <li><strong>≥ 300 元</strong>：漲停較稀有，多為個別事件而非族群輪動。</li>
     </ul>
     <p class="muted">本次篩選保留 50 元以上的中高價股，聚焦於法人會看的品種。</p>
   </section>
 
-  <!-- 名詞 -->
   <section>
     <h2>名詞說明</h2>
     <div class="card">
@@ -403,10 +250,10 @@
 
   <footer>
     <p>資料來源：TWSE（公開資訊觀測站）／ TPEx（櫃買中心）／ yfinance（成交量歷史）／ XQ 全球贏家（細產業 / 概念股對照）</p>
-    <p>分析日期：2026-05-12　·　分析窗口：2026-04-28 ~ 2026-05-12（10 個交易日，已排除 5/1 勞動節）　·　過濾條件：股價 ≥ 50 元</p>
+    <p>分析日期：2026-05-13　·　分析窗口：2026-04-28 ~ 2026-05-12（10 個交易日）　·　過濾條件：股價 ≥ 50 元</p>
+    <p>本報告每個交易日 18:00 自動更新。執行時間：2026-05-13 00:34:56</p>
     <p>本報告僅為資料分析示意，<strong>不構成任何投資建議</strong>。投資人應自行評估風險。</p>
   </footer>
-
 </div>
 </body>
 </html>
