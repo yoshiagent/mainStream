@@ -1,0 +1,6 @@
+# 私有資料 / 工具，不公開
+*.xlsx
+*.csv
+*.py
+__pycache__/
+.venv/
